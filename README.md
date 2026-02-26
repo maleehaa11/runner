@@ -27,3 +27,45 @@ As a player, I want the environment to collapse behind me so I feel urgency.
 As a player, I want my score to increase the longer I survive.
 As a designer, I want modular level segments so I can test different maze patterns.
 As a developer, I want clean collision logic so the game behaves consistently.
+
+2. scrum backlog - definitions and tests
+
+2.1 product backlog
+
+
+| priority  | feature | description | definition of done | test criteria |
+| --------- | ------- | ----------- | ------------------ | ------------- |
+| high   | player movement  | 3-direction movement  | smooth, responsive, no delay/lag  | player moves correctly  |
+| high  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+| high  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+| high  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
