@@ -18,3 +18,12 @@ The system must scale speed and difficulty dynamically.
 The system must run at a stable 30–60 FPS.
 The system must handle keyboard input with low latency.
 
+**1.3 Scrum‑Style User Stories**
+
+As a player, I want to move left/right/forward so I can navigate the maze.
+As a player, I want obstacles to appear unpredictably so the game feels challenging.
+As a player, I want visual and audio feedback when I take damage or fail.
+As a player, I want the environment to collapse behind me so I feel urgency.
+As a player, I want my score to increase the longer I survive.
+As a designer, I want modular level segments so I can test different maze patterns.
+As a developer, I want clean collision logic so the game behaves consistently.
