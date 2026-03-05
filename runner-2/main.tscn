@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bk2bogge7kcrx"]
+
+[ext_resource type="Script" uid="uid://cxwlib3am5sv" path="res://player.gd" id="1_ig7tw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0xm2m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h2yge"]
+size = Vector3(10, 0.5, 1000)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_1bvp3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lquwl"]
+size = Vector3(2.9696655, 2.4434814, 2.8277588)
+
+[node name="main" type="Node3D" unique_id=1995410900]
+
+[node name="ground" type="MeshInstance3D" parent="." unique_id=1172024454]
+transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 100, 0, 0, 0)
+mesh = SubResource("BoxMesh_0xm2m")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ground" unique_id=1110441873]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ground/StaticBody3D" unique_id=905346558]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000005, -0.07869289, 2.7850068, -0.059516154)
+shape = SubResource("BoxShape3D_h2yge")
+
+[node name="player" type="CharacterBody3D" parent="." unique_id=421646366]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 15)
+script = ExtResource("1_ig7tw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="player" unique_id=762729630]
+mesh = SubResource("CapsuleMesh_1bvp3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="player" unique_id=1438152657]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6312561, 0.7217407, 0.9138794)
+shape = SubResource("BoxShape3D_lquwl")
+
+[node name="Camera3D" type="Camera3D" parent="player" unique_id=701687525]
+transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 0, 3, 6)
+current = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1190865554]
+transform = Transform3D(0.8660254, -0.35355338, 0.35355338, 0, 0.70710677, 0.70710677, -0.5, -0.6123724, 0.6123724, 0, 0, 0)
