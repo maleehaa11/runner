@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://btksw86x7b6v7"]
+
+[ext_resource type="Script" uid="uid://1fepnm6qub1y" path="res://Pickups.gd" id="1_d5gmh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6qpsl"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_d5gmh"]
+material = SubResource("StandardMaterial3D_6qpsl")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0t63x"]
+size = Vector3(0.9984131, 1.0187378, 1)
+
+[node name="Coin" type="Area3D" unique_id=1163019330]
+script = ExtResource("1_d5gmh")
+Score = 10
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="." unique_id=1884451004]
+mesh = SubResource("BoxMesh_d5gmh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1421334188]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, 0, 0)
+shape = SubResource("BoxShape3D_0t63x")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
