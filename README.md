@@ -12,21 +12,21 @@ The player must feel urgency due to collapsing environments and unseen threats.
 
 **1.2 System Requirements**
 
-The system must generate or load maze segments seamlessly.
-The system must detect collisions accurately (walls, traps, falling debris).
-The system must scale speed and difficulty dynamically.
-The system must run at a stable 30–60 FPS.
-The system must handle keyboard input with low latency.
+- The system must generate or load maze segments seamlessly.
+- The system must detect collisions accurately (walls, traps, falling debris).
+- The system must scale speed and difficulty dynamically.
+- The system must run at a stable 30–60 FPS.
+- The system must handle keyboard input with low latency.
 
 **1.3 Scrum‑Style User Stories**
 
-As a player, I want to move left/right/forward so I can navigate the maze.
-As a player, I want obstacles to appear unpredictably so the game feels challenging.
-As a player, I want visual and audio feedback when I take damage or fail.
-As a player, I want the environment to collapse behind me so I feel urgency.
-As a player, I want my score to increase the longer I survive.
-As a designer, I want modular level segments so I can test different maze patterns.
-As a developer, I want clean collision logic so the game behaves consistently.
+- As a player, I want to move left/right/forward so I can navigate the maze.
+- As a player, I want obstacles to appear unpredictably so the game feels challenging.
+- As a player, I want visual and audio feedback when I take damage or fail.
+- As a player, I want the environment to collapse behind me so I feel urgency.
+- As a player, I want my score to increase the longer I survive.
+- As a designer, I want modular level segments so I can test different maze patterns.
+- As a developer, I want clean collision logic so the game behaves consistently.
 
 ***2. scrum backlog - definitions and tests***
 
@@ -57,35 +57,35 @@ The player awakens inside a massive, ancient labyrinth. The walls shift, and som
 **3.3 Characters**
 
 •	The Runner
-o	Human silhouette with simple but expressive animations
-o	Outfit: reinforced gear 
-o	Represents determination and survival instinct
+-	Human silhouette with simple but expressive animations
+-	Outfit: reinforced gear 
+-	Represents determination and survival instinct
 •	The Unseen Force
-o	Never fully shown
-o	Represented through:
-	Screen shake
-	Red warning lights
-	Distant roars
-	Darkness creeping in
+-	Never fully shown
+-	Represented through:
+-	Screen shake
+-	Red warning lights
+-	Distant roars
+-	Darkness creeping in
 
 **3.4 Environments**
 
 Themes
-•	Giant stone mazes
-•	Crumbling corridors
-•	Industrial ruins
-•	Elevated platforms over fog or darkness
+-	Giant stone mazes
+-	Crumbling corridors
+-	Industrial ruins
+-	Elevated platforms over fog or darkness
 
 Visual Style
-•	Semi-realistic
-•	Muted dystopian palette:
-o	Concrete grey
-o	Dusty brown
-o	Warning red/orange
+-	Semi-realistic
+-	Muted dystopian palette:
+- Concrete grey
+-	Dusty brown
+-	Warning red/orange
 
 Environmental Hazards
-•	Collapsing floors
-•	Maze blocks to enforce one route out
+-	Collapsing floors
+-	Maze blocks to enforce one route out
 
 **3.5 Gameplay**
 
@@ -101,56 +101,56 @@ Gameplay Loop
 
 Motivation Loop
 
-•	Player State: Running, stressed, focused
-•	Need: Escape, survive
-•	Challenge: Increasing speed + unpredictable hazards
-•	Reward: Score, gear upgrades, mastery
-•	Failure: Instant death → restart → try again
+-	Player State: Running, stressed, focused
+-	Need: Escape, survive
+-	Challenge: Increasing speed + unpredictable hazards
+-	Reward: Score, gear upgrades, mastery
+-	Failure: Instant death → restart → try again
 
 **3.6 Game Rules**
 
-•	One hit = death (unless shield power-up added later)
-•	Player cannot move backwards
-•	Maze collapses after a fixed delay
-•	Speed increases every 10 seconds
-•	Score = time survived × speed multiplier
+-	One hit = death (unless shield power-up added later)
+-	Player cannot move backwards
+-	Maze collapses after a fixed delay
+-	Speed increases every 10 seconds
+-	Score = time survived × speed multiplier
 
 **3.7 Programming Language & Platform**
 
-•	Godot 4.6
-•	GDScript (Python-like, ideal for rapid prototyping)
-•	Target: Desktop prototype, mobile-ready controls
+-	Godot 4.6
+-	GDScript (Python-like, ideal for rapid prototyping)
+-	Target: Desktop prototype, mobile-ready controls
 
 **3.8 User Interface & Controls**
 Controls
 
-•	Left Arrow: Move left
-•	Right Arrow: Move right
-•	Space: Jump
-•	Down Arrow: Slide
+-	Left Arrow: Move left
+-	Right Arrow: Move right
+-	Space: Jump
+-	Down Arrow: Slide
 HUD
 
-•	Score
+-	Score
 
 **3.9 Technical Challenges**
 
-•	Smooth obstacle generation
-•	Avoiding stutter when loading segments
-•	Accurate collision detection at high speeds
-•	Implementing collapse timing without lag
-•	Balancing difficulty scaling
-•	Ensuring mobile-friendly input mapping
-•	Importing player with correct animations
-•	Ensuring animations work with correct buttons
+-	Smooth obstacle generation
+-	Avoiding stutter when loading segments
+-	Accurate collision detection at high speeds
+-	Implementing collapse timing without lag
+-	Balancing difficulty scaling
+-	Ensuring mobile-friendly input mapping
+-	Importing player with correct animations
+-	Ensuring animations work with correct buttons
 
 
 **3.10 Test Plan**
 
 Test Types
-•	Unit tests (movement, collision)
-•	Integration tests (obstacles + player + hazards)
-•	Performance tests (FPS stability)
-•	User tests (readability, difficulty)
+-	Unit tests (movement, collision)
+-	Integration tests (obstacles + player + hazards)
+-	Performance tests (FPS stability)
+-	User tests (readability, difficulty)
 
 
 ***4 Project Planning, Management & Documentation***
