@@ -187,6 +187,16 @@ Meeting 4
 - Next: add environment, make objects look like walls/mazes focus more on UI
 - Problems: struggled with animations linking to player - sorted using AnimationPlayer
 
+***5. Software Tools & Coding Techniques (5%)***
+
+**Tools Used**
+-	Godot 4 Engine
+-	GDScript
+-	Mixamo (sprites + animations)
+-	GitHub (version control)
+
+
+
 
 
 
