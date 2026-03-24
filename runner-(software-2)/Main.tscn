@@ -1,0 +1,302 @@
+[gd_scene format=3 uid="uid://8qtwxfunatxy"]
+
+[ext_resource type="Script" uid="uid://dj70bfvl7jr0d" path="res://player.gd" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://bx70cgwnqitr2" path="res://GameManager.gd" id="1_r0du0"]
+[ext_resource type="PackedScene" uid="uid://d367c26yyogwb" path="res://standard_obstacle.tscn" id="2_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://buisryncigw8a" path="res://lower_obstacle.tscn" id="3_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://cb0025g54qhnl" path="res://upper_obstacle.tscn" id="4_fos0i"]
+[ext_resource type="PackedScene" uid="uid://btksw86x7b6v7" path="res://coin.tscn" id="5_lgr22"]
+[ext_resource type="Script" uid="uid://cgs8d0xfyysgf" path="res://ui_manager.gd" id="6_3dxm6"]
+[ext_resource type="PackedScene" uid="uid://cxmlvuilyrfx3" path="res://mixamoplayer.tscn" id="7_03owx"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rxg2q"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_glv2v"]
+sky_material = SubResource("ProceduralSkyMaterial_rxg2q")
+
+[sub_resource type="Environment" id="Environment_uu6xs"]
+background_mode = 2
+sky = SubResource("Sky_glv2v")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rxg2q"]
+height = 1.0
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_trn2v"]
+graph_offset = Vector2(104.157036, -108.58836)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_trn2v"]
+height = 2.3823242
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_lgr22"]
+
+[node name="GameManager" type="Node3D" unique_id=1886602858]
+script = ExtResource("1_r0du0")
+ObstacleScene = Array[PackedScene]([ExtResource("2_cm0pq"), ExtResource("3_cm0pq"), ExtResource("4_fos0i")])
+PowerupsScene = Array[PackedScene]([ExtResource("5_lgr22")])
+SpawnDistance = -30.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1789353247]
+environment = SubResource("Environment_uu6xs")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1593750382]
+transform = Transform3D(-0.877983, 0.39685354, -0.2676811, 0, 0.5591929, 0.82903755, 0.47869188, 0.72788084, -0.49096185, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=1711016516]
+script = ExtResource("1_glv2v")
+
+[node name="StandingCollision" type="CollisionShape3D" parent="Player" unique_id=706921522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03961897, 1.0053736, 0.11573148)
+shape = SubResource("CapsuleShape3D_rxg2q")
+
+[node name="Model" type="Node3D" parent="Player" unique_id=1939879798]
+
+[node name="AnimationTree" type="AnimationTree" parent="Player/Model" unique_id=2107356865]
+root_node = NodePath("../Eve By J_Gonzales2")
+tree_root = SubResource("AnimationNodeStateMachine_trn2v")
+anim_player = NodePath("../Eve By J_Gonzales2/AnimationPlayer")
+
+[node name="Eve By J_Gonzales2" parent="Player/Model" unique_id=2126819738 instance=ExtResource("7_03owx")]
+transform = Transform3D(-1.4998155, 0.0009161853, -0.02350865, 0.0009162979, 1.4999998, 0, 0.023508642, -1.4360616e-05, -1.4998157, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Player/Model/Eve By J_Gonzales2" index="0" unique_id=1981389078]
+bones/0/position = Vector3(-6.8345544e-06, 0.8106287, 0.0056886203)
+bones/0/rotation = Quaternion(0, 0, 8.726646e-07, 1)
+bones/1/rotation = Quaternion(-0.110713735, 1.5226396e-07, -8.086311e-07, 0.9938523)
+bones/2/rotation = Quaternion(0.009588554, -0.00023376028, 0.002775641, 0.9999501)
+bones/3/rotation = Quaternion(0.101178594, -7.4978365e-05, -0.002784458, 0.9948644)
+bones/4/rotation = Quaternion(0, 0, 0, 1)
+bones/5/rotation = Quaternion(0, 0, 0, 1)
+bones/7/rotation = Quaternion(-0.56575114, -0.42368633, 0.56740886, -0.42244852)
+bones/8/rotation = Quaternion(-0.14874701, -0.005573576, -0.03995665, 0.98805195)
+bones/9/rotation = Quaternion(0.00540893, -0.00022632116, 0.041804966, 0.9991111)
+bones/10/rotation = Quaternion(5.04871e-29, 0, 2.646978e-23, 1)
+bones/11/rotation = Quaternion(0.21867837, 0.071468726, 0.25572765, 0.9389757)
+bones/12/rotation = Quaternion(0.00035096274, -0.00010417824, -0.013617637, 0.9999072)
+bones/13/rotation = Quaternion(-0.00032768256, 9.66049e-05, 0.012589364, 0.99992067)
+bones/15/rotation = Quaternion(0.05646265, -0.0015045172, -0.026594257, 0.9980493)
+bones/16/rotation = Quaternion(-4.458513e-07, 3.0632538e-07, 2.6986913e-06, 1)
+bones/17/rotation = Quaternion(5.795911e-07, 6.564295e-07, 5.783062e-06, 1)
+bones/19/rotation = Quaternion(0.08238414, -0.0032949178, -0.039826557, 0.99579906)
+bones/20/rotation = Quaternion(1.594999e-06, 3.8065245e-05, 0.00022847558, 0.99999994)
+bones/21/rotation = Quaternion(-1.9729985e-06, -4.5980843e-05, -0.00027598726, 0.99999994)
+bones/23/rotation = Quaternion(0.11168199, -0.0089769075, -0.079616286, 0.99050885)
+bones/24/rotation = Quaternion(-4.512872e-06, -6.5061984e-05, -0.0002848557, 0.99999994)
+bones/25/rotation = Quaternion(4.251868e-06, 6.494414e-05, 0.0002843401, 0.99999994)
+bones/27/rotation = Quaternion(0.103418924, -0.009129432, -0.087459065, 0.9907432)
+bones/28/rotation = Quaternion(-7.42889e-07, -1.18911175e-05, -5.633745e-05, 1)
+bones/29/rotation = Quaternion(2.3593876e-07, -2.632704e-06, -1.24731905e-05, 1)
+bones/31/rotation = Quaternion(0.56574285, -0.4236974, 0.5674008, 0.42245933)
+bones/32/rotation = Quaternion(-0.14874043, 0.0055722697, 0.039956614, 0.988053)
+bones/33/rotation = Quaternion(0.0054215402, 0.00022684864, -0.041804895, 0.99911106)
+bones/34/rotation = Quaternion(8.077936e-28, 0, -2.646978e-23, 1)
+bones/35/rotation = Quaternion(0.21945187, -0.06863477, -0.25506687, 0.93918633)
+bones/36/rotation = Quaternion(0.00030489618, 0.000111406145, 0.013619725, 0.9999072)
+bones/37/rotation = Quaternion(-0.0002921082, -0.00010314044, -0.012589528, 0.99992067)
+bones/39/rotation = Quaternion(0.056584124, 0.0015076874, 0.0265929, 0.99804246)
+bones/40/rotation = Quaternion(-0.0002655816, -2.3464347e-07, -2.067579e-06, 0.99999994)
+bones/41/rotation = Quaternion(8.5937034e-05, -5.329813e-07, -4.7039575e-06, 1)
+bones/43/rotation = Quaternion(0.082105316, 0.0052541993, 0.063646264, 0.99457544)
+bones/44/rotation = Quaternion(8.9701185e-05, -3.8180577e-05, -0.00022954526, 0.99999994)
+bones/45/rotation = Quaternion(0.0001268224, 4.6704015e-05, 0.00028041378, 0.99999994)
+bones/47/rotation = Quaternion(0.111668706, 0.008975736, 0.0796155, 0.99051046)
+bones/48/rotation = Quaternion(-7.270557e-05, 6.520285e-05, 0.00028559752, 0.99999994)
+bones/49/rotation = Quaternion(0.000117592805, -6.509957e-05, -0.00028508613, 0.99999994)
+bones/51/rotation = Quaternion(0.10280106, 0.012577338, 0.12078779, 0.9872609)
+bones/52/rotation = Quaternion(3.130612e-07, 1.1518296e-05, 5.470882e-05, 1)
+bones/53/rotation = Quaternion(0.00010506037, 3.686987e-06, 1.7503047e-05, 1)
+bones/55/rotation = Quaternion(1.577043e-08, 0.019220106, 0.9998153, 8.203659e-07)
+bones/56/rotation = Quaternion(-0.059061147, 1.5434382e-33, 4.1431354e-25, 0.99825436)
+bones/57/rotation = Quaternion(0.35393858, 0.013575134, -0.01413686, 0.9350633)
+bones/58/rotation = Quaternion(0.44305748, 0.0076430906, 0.006602536, 0.89643633)
+bones/60/rotation = Quaternion(1.572475e-08, 0.01922011, 0.9998153, 8.179893e-07)
+bones/61/rotation = Quaternion(-0.05906117, -3.3145083e-23, -2.0715657e-25, 0.99825436)
+bones/62/rotation = Quaternion(0.35393828, -0.013573811, 0.014137522, 0.9350634)
+bones/63/rotation = Quaternion(0.44305775, -0.0076431874, -0.0066009285, 0.8964362)
+
+[node name="Camera3D" type="Camera3D" parent="Player" unique_id=1173756052]
+transform = Transform3D(1, 0, 0, 0, 0.9911485, 0.13275808, 0, -0.13275808, 0.9911485, 0.12479019, 2.8234937, 5.406874)
+
+[node name="CrouchedCollision" type="CollisionShape3D" parent="Player" unique_id=1417127962]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03961897, 0.50097907, 0.11573148)
+shape = SubResource("CapsuleShape3D_rxg2q")
+
+[node name="PowerupCollider" type="Area3D" parent="Player" unique_id=666508484]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player/PowerupCollider" unique_id=416960739]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024108678, 0.9610877, 0)
+shape = SubResource("CapsuleShape3D_trn2v")
+
+[node name="Environment" type="Node3D" parent="." unique_id=229712450]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.43826342, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Environment" unique_id=1398715133]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -80.13745)
+use_collision = true
+size = Vector3(10, 0.5, 200)
+
+[node name="ObstacleContainer" type="Node3D" parent="." unique_id=1475992289]
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=1414505274]
+
+[node name="ScoreTimer" type="Timer" parent="." unique_id=643220041]
+
+[node name="UI Manager" type="Control" parent="." unique_id=2093690905]
+layout_mode = 3
+anchor_left = 0.9990001
+anchor_top = -0.011000001
+anchor_right = 0.9990001
+anchor_bottom = -0.011000001
+offset_left = -1154.8481
+offset_top = 0.12800074
+offset_right = 0.15185547
+offset_bottom = 660.128
+script = ExtResource("6_3dxm6")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI Manager" unique_id=1793938610]
+layout_mode = 0
+offset_left = 1027.0
+offset_top = 21.0
+offset_right = 1147.0
+offset_bottom = 59.0
+text = "Score:  "
+
+[node name="GameOverContainer" type="Control" parent="UI Manager" unique_id=560852082]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.75
+offset_top = -78.0
+offset_right = 94.75
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="UI Manager/GameOverContainer" unique_id=369961470]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI Manager/GameOverContainer" unique_id=166413174]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameoverLabel" type="Label" parent="UI Manager/GameOverContainer/VBoxContainer" unique_id=1140979181]
+layout_mode = 2
+text = "Game Over"
+horizontal_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="UI Manager/GameOverContainer/VBoxContainer" unique_id=275475485]
+layout_mode = 2
+text = "Score:"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="UI Manager/GameOverContainer/VBoxContainer" unique_id=1640664747]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="UI Manager/GameOverContainer/VBoxContainer" unique_id=696360434]
+layout_mode = 2
+text = "Play Again"
+
+[node name="StartGameContainer" type="Control" parent="UI Manager" unique_id=2043294747]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.25
+offset_top = -75.5
+offset_right = 107.25
+offset_bottom = 75.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="UI Manager/StartGameContainer" unique_id=1829121546]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -179.3125
+offset_top = -119.875
+offset_right = 179.3125
+offset_bottom = 119.875
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI Manager/StartGameContainer/Panel" unique_id=115741296]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -73.5
+offset_top = -96.5
+offset_right = 73.5
+offset_bottom = 96.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="UI Manager/StartGameContainer/Panel/VBoxContainer" unique_id=1399814378]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "runner"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="UI Manager/StartGameContainer/Panel/VBoxContainer" unique_id=1419802159]
+layout_mode = 2
+text = "Instructions:
+right arrow = right
+left arrow = left
+down arrow = slide
+space = jump"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="UI Manager/StartGameContainer/Panel/VBoxContainer" unique_id=717603675]
+custom_minimum_size = Vector2(0, 23)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="UI Manager/StartGameContainer/Panel/VBoxContainer" unique_id=147717557]
+layout_mode = 2
+text = "Start Game"
+
+[node name="DeathPlane" type="Area3D" parent="." unique_id=207994976]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DeathPlane" unique_id=821879158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.3420749, 21.796387)
+shape = SubResource("WorldBoundaryShape3D_lgr22")
+
+[connection signal="GameOver" from="." to="Player" method="_on_game_manager_game_over"]
+[connection signal="GameOver" from="." to="UI Manager" method="_on_game_manager_game_over"]
+[connection signal="ScoreUpdated" from="." to="." method="_on_score_updated"]
+[connection signal="ScoreUpdated" from="." to="UI Manager" method="_on_game_manager_score_updated"]
+[connection signal="StartGame" from="." to="Player" method="_on_game_manager_start_game"]
+[connection signal="AddScore" from="Player" to="." method="_on_player_add_score"]
+[connection signal="area_entered" from="Player/PowerupCollider" to="Player" method="_on_powerup_collider_area_entered"]
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
+[connection signal="StartGame" from="UI Manager" to="." method="_on_ui_manager_start_game"]
+[connection signal="button_down" from="UI Manager/GameOverContainer/VBoxContainer/Button" to="UI Manager" method="_on_button_button_down"]
+[connection signal="button_down" from="UI Manager/StartGameContainer/Panel/VBoxContainer/Button" to="UI Manager" method="_on_button_button_down"]
+[connection signal="area_entered" from="DeathPlane" to="." method="_on_death_plane_area_entered"]
+
+[editable path="Player/Model/Eve By J_Gonzales2"]
