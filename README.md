@@ -195,6 +195,25 @@ Meeting 4
 -	Mixamo (sprites + animations)
 -	GitHub (version control)
 
+***6. Completion & Testing Against Requirements (15%)***
+
+**Verification**
+
+-	All core mechanics implemented
+-	Player movement responsive
+-	Obstacle segments load correctly
+-	Speed scaling works
+-	HUD updates in real time
+- Game meets user/system requirements
+
+**Validation**
+
+Playtesting confirms:
+-	Difficulty increases smoothly
+-	Visual feedback is clear
+-	Controls feel intuitive
+-	Performance stable
+
 
 
 
