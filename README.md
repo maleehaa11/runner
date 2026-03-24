@@ -37,7 +37,7 @@ The player must feel urgency due to collapsing environments and unseen threats.
 | --------- | ------- | ----------- | ------------------ | ------------- |
 | high   | player movement  | 3-direction movement  | smooth, responsive, no delay/lag  | player moves correctly  |
 | high  | player animation  | player running, sliding, jumping  | correct animations responsive to each instruction  | animations correct  |
-| high  | speed scaling | game speeds up overtime  | difficulty surve implemented  | speed increases every 1.0 second  |
+| high  | speed scaling | game speeds up overtime  | difficulty surve implemented  | speed increases every 10 second  |
 | medium  | HUD  | score,speed  | UI updateable  | score increases  |
 | medium  | environment collapse  | world ends behind player  | ends  | player cannot backtrack  |
 | low  | sound design  | footsteps, coin pickup  | sounds implemented  | trigger at correct events |
