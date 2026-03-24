@@ -189,6 +189,21 @@ Evaluates:
 - Readability of UI
 - Player experience
 
+**3.11 Test Plan Table**
+
+| test ID  | feature | description | expected result | actual result | 
+| --------- | ------- | ----------- | ------------------ | ------------- |
+| T01   | lane movement  | left/right to change lanes  | player moves smoothly  |  works as expected |
+| T02  |  jump | space to jump  |  player jumps |  works as expected |
+| T03  | slide  | down to slide  | player slide + animation plays  |  works as expected |
+| T04  | pickup collection  |  touch pickup (coin) |  pickup disappears + score increased |  works as expected |
+| T05  | speed scaling  | survive longer = speed increase  | player speed increases  |  works as expected |
+| T06  | environment collapse  | stand still  | collapse catches player = death  | works as expected  |
+| T07  |  animation switching |  perform actions |  correct animation for each state |  initial issues using AnimationTree, fixed using AnimationPlayer |
+| T08  |  restart system |  press restart button |  game restarts |  works as expected |
+| T09  | input latency  |  press movement keys |  immediate response | works as expected  |
+| T10  | UI updates  | score increases overtime  | UI updates every frame  |  works as expected |
+
 
 ***4 Project Planning, Management & Documentation***
 
