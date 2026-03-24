@@ -87,6 +87,27 @@ Environmental Hazards
 •	Collapsing floors
 •	Maze blocks to enforce one route out
 
+**3.5 Gameplay**
+
+Gameplay Loop
+
+1.	Player runs forward
+2.	Maze generates ahead
+3.	Environment collapses behind
+4.	Player avoids hazards
+5.	Speed increases
+6.	Player eventually fails
+7.	Score recorded → restart
+
+Motivation Loop
+
+•	Player State: Running, stressed, focused
+•	Need: Escape, survive
+•	Challenge: Increasing speed + unpredictable hazards
+•	Reward: Score, gear upgrades, mastery
+•	Failure: Instant death → restart → try again
+
+
 
 
 
