@@ -129,9 +129,6 @@ Controls
 •	Down Arrow: Slide
 HUD
 •	Score
-•	Stamina bar
-•	Speed indicator
-•	Warning flashes
 
 
 
