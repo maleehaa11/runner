@@ -107,6 +107,14 @@ Motivation Loop
 •	Reward: Score, gear upgrades, mastery
 •	Failure: Instant death → restart → try again
 
+**3.6 Game Rules**
+
+•	One hit = death (unless shield power-up added later)
+•	Player cannot move backwards
+•	Maze collapses after a fixed delay
+•	Speed increases every 10 seconds
+•	Score = time survived × speed multiplier
+
 
 
 
