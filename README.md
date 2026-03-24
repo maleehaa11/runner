@@ -28,9 +28,9 @@ As a player, I want my score to increase the longer I survive.
 As a designer, I want modular level segments so I can test different maze patterns.
 As a developer, I want clean collision logic so the game behaves consistently.
 
-2. scrum backlog - definitions and tests
+***2. scrum backlog - definitions and tests***
 
-2.1 product backlog
+**2.1 product backlog**
 
 
 | priority  | feature | description | definition of done | test criteria |
@@ -43,6 +43,11 @@ As a developer, I want clean collision logic so the game behaves consistently.
 | low  | sound design  | footsteps, coin pickup  | sounds implemented  | trigger at correct events |
 | medium  | chaser  | unseen force  | visiual/audio cues  | player dies if too slow  |
 | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+
+***Detailed design, Development and Implementation***
+
+**3.1 Core Game Concept**
+Runner is a fast paced, adrenaline-driven endless runner set inside collapsing stone mazes and industrial ruins. The player must escape shifting paths while being chased by an unseen force. The game emphasizes reflexes, pattern recognition, and high-pressure decision-making.
 
 
 
