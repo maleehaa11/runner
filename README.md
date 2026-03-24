@@ -115,6 +115,13 @@ Motivation Loop
 •	Speed increases every 10 seconds
 •	Score = time survived × speed multiplier
 
+**3.7 Programming Language & Platform**
+
+•	Godot 4.6
+•	GDScript (Python-like, ideal for rapid prototyping)
+•	Target: Desktop prototype, mobile-ready controls
+
+
 
 
 
