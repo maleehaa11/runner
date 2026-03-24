@@ -123,13 +123,34 @@ Motivation Loop
 
 **3.8 User Interface & Controls**
 Controls
+
 •	Left Arrow: Move left
 •	Right Arrow: Move right
 •	Space: Jump
 •	Down Arrow: Slide
 HUD
+
 •	Score
 
+**3.9 Technical Challenges**
+
+•	Smooth obstacle generation
+•	Avoiding stutter when loading segments
+•	Accurate collision detection at high speeds
+•	Implementing collapse timing without lag
+•	Balancing difficulty scaling
+•	Ensuring mobile-friendly input mapping
+•	Importing player with correct animations
+•	Ensuring animations work with correct buttons
+
+
+**3.10 Test Plan**
+
+Test Types
+•	Unit tests (movement, collision)
+•	Integration tests (obstacles + player + hazards)
+•	Performance tests (FPS stability)
+•	User tests (readability, difficulty)
 
 
 
