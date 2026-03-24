@@ -121,6 +121,18 @@ Motivation Loop
 •	GDScript (Python-like, ideal for rapid prototyping)
 •	Target: Desktop prototype, mobile-ready controls
 
+**3.8 User Interface & Controls**
+Controls
+•	Left Arrow: Move left
+•	Right Arrow: Move right
+•	Space: Jump
+•	Down Arrow: Slide
+HUD
+•	Score
+•	Stamina bar
+•	Speed indicator
+•	Warning flashes
+
 
 
 
