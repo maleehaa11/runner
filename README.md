@@ -159,7 +159,33 @@ Test Types
 
 <img width="751" height="452" alt="image" src="https://github.com/user-attachments/assets/993c3c7c-6e3f-4731-8382-97c7eb115681" />
 
+The burndown chart tracks 18 total tasks over a 4‑week sprint. The ideal burndown line decreases linearly from 18 to 0 tasks. The actual burndown line shows consistent weekly progress: 14 tasks remaining in Week 1, 10 in Week 2, 6 in Week 3, and 0 by Week 4. Weekly notes document completed work, blockers, and next steps. The chart demonstrates effective sprint management, backlog adaptation, and steady progress toward project completion
 
+**4.2 Weekly Meeting Logs**
+
+Meeting 1
+
+- First session: implement basic movement
+- Next: add world and obstacles
+- Problems: player not moving smoothly
+
+Meeting 2
+
+- Since last session: player moved smoothly across lanes, added world and obstacles (jump and slide)
+- Next: implement speed scaling and death by falling off world
+- Problems: collision with sliding obstacle
+
+Meeting 3
+
+- Since last session: fixed collision, added speed scaling + UI for start up and death and pickup objects
+- Next: implement try again button and restart, scoring and 3d character with animations
+- Problems: objects wouldnt disapper when picked up
+
+Meeting 4
+
+- Since last session: objects disapper when picked, restart button and scoring implemented, 3d player with animations added
+- Next: add environment, make objects look like walls/mazes focus more on UI
+- Problems: struggled with animations linking to player - sorted using AnimationPlayer
 
 
 
