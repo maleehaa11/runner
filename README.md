@@ -153,6 +153,14 @@ Test Types
 •	User tests (readability, difficulty)
 
 
+***4 Project Planning, Management & Documentation***
+
+**4.1 Burndown Chart**
+
+<img width="751" height="452" alt="image" src="https://github.com/user-attachments/assets/993c3c7c-6e3f-4731-8382-97c7eb115681" />
+
+
+
 
 
 
