@@ -47,9 +47,11 @@ As a developer, I want clean collision logic so the game behaves consistently.
 ***Detailed design, Development and Implementation***
 
 **3.1 Core Game Concept**
+
 Runner is a fast paced, adrenaline-driven endless runner set inside collapsing stone mazes and industrial ruins. The player must escape shifting paths while being chased by an unseen force. The game emphasizes reflexes, pattern recognition, and high-pressure decision-making.
 
 **3.2 Game Story**
+
 The player awakens inside a massive, ancient labyrinth. The walls shift, and something hunts them from the shadows. Their only goal: run. As the player survives longer, the environment reveals symbols and markings hinting at a forgotten civilization and the reason the maze exists.
 
 **3.3 Characters**
@@ -66,6 +68,24 @@ o	Represented through:
 	Distant roars
 	Darkness creeping in
 
+**3.4 Environments**
+
+Themes
+•	Giant stone mazes
+•	Crumbling corridors
+•	Industrial ruins
+•	Elevated platforms over fog or darkness
+
+Visual Style
+•	Semi-realistic
+•	Muted dystopian palette:
+o	Concrete grey
+o	Dusty brown
+o	Warning red/orange
+
+Environmental Hazards
+•	Collapsing floors
+•	Maze blocks to enforce one route out
 
 
 
