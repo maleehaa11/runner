@@ -42,7 +42,7 @@ The player must feel urgency due to collapsing environments and unseen threats.
 | medium  | environment collapse  | world ends behind player  | ends  | player cannot backtrack  |
 | low  | sound design  | footsteps, coin pickup  | sounds implemented  | trigger at correct events |
 | medium  | chaser  | unseen force  | visiual/audio cues  | player dies if too slow  |
-| Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+| medium  | restart system  | restart option once player dies  | screen shows restart option at death  | game restarts  |
 
 ***Detailed design, Development and Implementation***
 
