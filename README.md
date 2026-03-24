@@ -146,11 +146,48 @@ HUD
 
 **3.10 Test Plan**
 
+Test Objectives
+The purpose of this test plan is to verify that:
+
+- All core gameplay mechanics function correctly
+- The game meets user and system requirements
+- Animations, controls, and collisions behave consistently
+- Performance remains stable during gameplay
+- The game is enjoyable, readable, and responsive
+
 Test Types
--	Unit tests (movement, collision)
--	Integration tests (obstacles + player + hazards)
--	Performance tests (FPS stability)
--	User tests (readability, difficulty)
+1. Unit Tests
+Tests individual components such as:
+
+- Movement logic
+- Jump and slide functions
+- Collision detection
+- Score updates
+- Speed scaling
+
+2. Integration Tests
+Ensures systems work together:
+
+- Player + obstacles
+- Player + pickups
+- Player + environment collapse
+- AnimationPlayer + movement states
+- UI + scoring system
+
+3. Performance Tests
+Checks:
+
+- FPS stability (target 30–60 FPS)
+- No stutter when loading maze segments
+- Smooth animation playback
+
+4. User Tests
+Evaluates:
+
+- Control responsiveness
+- Difficulty curve
+- Readability of UI
+- Player experience
 
 
 ***4 Project Planning, Management & Documentation***
