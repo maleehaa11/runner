@@ -52,6 +52,21 @@ Runner is a fast paced, adrenaline-driven endless runner set inside collapsing s
 **3.2 Game Story**
 The player awakens inside a massive, ancient labyrinth. The walls shift, and something hunts them from the shadows. Their only goal: run. As the player survives longer, the environment reveals symbols and markings hinting at a forgotten civilization and the reason the maze exists.
 
+**3.3 Characters**
+
+•	The Runner
+o	Human silhouette with simple but expressive animations
+o	Outfit: reinforced gear 
+o	Represents determination and survival instinct
+•	The Unseen Force
+o	Never fully shown
+o	Represented through:
+	Screen shake
+	Red warning lights
+	Distant roars
+	Darkness creeping in
+
+
 
 
 
